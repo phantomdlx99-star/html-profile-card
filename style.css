@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  width: 400px;
+  padding: 15px 20px;
+  background-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 370px;
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  background: rgb(28, 115, 255);
+  width: 100%;
+  height: 36%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.profile-img {
+  border: 3px solid rgb(14, 111, 255);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.profile-img img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px white solid;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 10px 30px;
+  width: 150px;
+  background-color: rgb(28, 115, 255);
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(15, 100, 220);
+  transform: scale(105%);
+}
+
+button:active {
+  transform: scale(100%);
+}
